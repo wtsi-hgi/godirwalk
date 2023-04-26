@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/karrick/godirwalk"
+	"github.com/wtsi-hgi/godirwalk"
 )
 
 func main() {

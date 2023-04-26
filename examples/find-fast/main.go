@@ -12,8 +12,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/karrick/godirwalk"
-	"github.com/karrick/golf"
+	"github.com/wtsi-hgi/godirwalk"
+	"github.com/wtsi-hgi/golf"
 	"github.com/mattn/go-isatty"
 )
 

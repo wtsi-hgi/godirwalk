@@ -1,10 +1,10 @@
-module github.com/karrick/godirwalk/examples/find-fast
+module github.com/wtsi-hgi/godirwalk/examples/find-fast
 
-replace github.com/karrick/godirwalk => ../../
+replace github.com/wtsi-hgi/godirwalk => ../../
 
 require (
-	github.com/karrick/godirwalk v1.13.5
-	github.com/karrick/golf v1.4.0
+	github.com/wtsi-hgi/godirwalk v1.13.5
+	github.com/wtsi-hgi/golf v1.4.0
 	github.com/mattn/go-isatty v0.0.11
 	golang.org/x/sys v0.0.0-20191210023423-ac6580df4449 // indirect
 )

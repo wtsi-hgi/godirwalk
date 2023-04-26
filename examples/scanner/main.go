@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/karrick/godirwalk"
+	"github.com/wtsi-hgi/godirwalk"
 )
 
 func main() {

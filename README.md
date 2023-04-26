@@ -3,7 +3,7 @@
 `godirwalk` is a library for traversing a directory tree on a file
 system.
 
-[![GoDoc](https://godoc.org/github.com/karrick/godirwalk?status.svg)](https://godoc.org/github.com/karrick/godirwalk) [![Build Status](https://dev.azure.com/microsoft0235/microsoft/_apis/build/status/karrick.godirwalk?branchName=master)](https://dev.azure.com/microsoft0235/microsoft/_build/latest?definitionId=1&branchName=master)
+[![GoDoc](https://godoc.org/github.com/wtsi-hgi/godirwalk?status.svg)](https://godoc.org/github.com/wtsi-hgi/godirwalk) [![Build Status](https://dev.azure.com/microsoft0235/microsoft/_apis/build/status/wtsi-hgi.godirwalk?branchName=master)](https://dev.azure.com/microsoft0235/microsoft/_build/latest?definitionId=1&branchName=master)
 
 In short, why did I create this library?
 
@@ -15,6 +15,8 @@ In short, why did I create this library?
 Depending on your specific circumstances, [you might no longer need a
 library for file walking in
 Go](https://engineering.kablamo.com.au/posts/2021/quick-comparison-between-go-file-walk-implementations).
+
+This fork adds inode information to the Dirent type.
 
 ## Usage Example
 
@@ -98,7 +100,7 @@ entire `os.FileInfo` data structure, the callback can easiy invoke
 $ go test -bench=. -benchmem
 goos: darwin
 goarch: amd64
-pkg: github.com/karrick/godirwalk
+pkg: github.com/wtsi-hgi/godirwalk
 BenchmarkReadDirnamesStandardLibrary-12   50000       26250  ns/op       10360  B/op       16  allocs/op
 BenchmarkReadDirnamesThisLibrary-12       50000       24372  ns/op        5064  B/op       20  allocs/op
 BenchmarkFilepathWalk-12                      1  1099524875  ns/op   228415912  B/op   416952  allocs/op
@@ -107,7 +109,7 @@ BenchmarkGodirwalkUnsorted-12                 3   509219296  ns/op   100751400  
 BenchmarkFlameGraphFilepathWalk-12            1  7478618820  ns/op  2284138176  B/op  4169453  allocs/op
 BenchmarkFlameGraphGodirwalk-12               1  4977264058  ns/op  1031105328  B/op  4514423  allocs/op
 PASS
-ok  	github.com/karrick/godirwalk	21.219s
+ok  	github.com/wtsi-hgi/godirwalk	21.219s
 ```
 
 ##### Linux
@@ -116,7 +118,7 @@ ok  	github.com/karrick/godirwalk	21.219s
 $ go test -bench=. -benchmem
 goos: linux
 goarch: amd64
-pkg: github.com/karrick/godirwalk
+pkg: github.com/wtsi-hgi/godirwalk
 BenchmarkReadDirnamesStandardLibrary-12  100000       15458  ns/op       10360  B/op       16  allocs/op
 BenchmarkReadDirnamesThisLibrary-12      100000       14646  ns/op        5064  B/op       20  allocs/op
 BenchmarkFilepathWalk-12                      2   631034745  ns/op   228210216  B/op   416939  allocs/op
@@ -125,7 +127,7 @@ BenchmarkGodirwalkUnsorted-12                 3   355363915  ns/op   100629234  
 BenchmarkFlameGraphFilepathWalk-12            1  6086913991  ns/op  2282104720  B/op  4169417  allocs/op
 BenchmarkFlameGraphGodirwalk-12               1  3456398824  ns/op  1029886400  B/op  4514373  allocs/op
 PASS
-ok      github.com/karrick/godirwalk    19.179s
+ok      github.com/wtsi-hgi/godirwalk    19.179s
 ```
 
 ### It's more correct on Windows than `filepath.Walk`

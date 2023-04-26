@@ -11,7 +11,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/karrick/godirwalk"
+	"github.com/wtsi-hgi/godirwalk"
 )
 
 var progname = filepath.Base(os.Args[0])
